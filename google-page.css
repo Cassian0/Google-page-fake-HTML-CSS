@@ -1,0 +1,211 @@
+:root {
+    --primary-font-color: #5f6368;
+    --secondary-font-color: #242424;
+    --primary-bg-color: #fff;
+    --secondary-bg-color: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+body, input, button {
+    font: 16px Arial;
+}
+
+button {
+    cursor: pointer;
+}
+/*Formatação do cabeçalho*/
+header {
+    height: 60px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+/*Formatando as navegações*/
+header nav{
+    display: flex;
+    align-items: center;
+}
+/*Formatando a lista*/
+header ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+/*Formatando os items da lista */
+header ul li {
+    margin-top: 3px;
+    margin-left: 15px;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+header, header a{
+    font-size: 13px;
+    color: var(--secondary-font-color);
+}
+
+#apps >img {
+    margin-top: 2px;
+    margin-left: 7px;
+    height: 16px;
+    width: 16px;
+    opacity: 0.55;
+}
+
+/*Ao passar o mouse por cima da img ela muda a opacidade*/
+#apps >img:hover{
+    opacity: 0.85;
+}
+/*Imagem do profile google*/
+#profile >img{
+    margin-left: 5px;
+    height: 44px;
+    width: 36px;
+    border-radius: 50%;
+}
+/*Centro da Pagina*/
+main{
+    flex: 1;/*Atraves do display flex podemos dizer para o main abranger todo o espaço restante da página*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Formato da section que vem logo após o main entao utilizamos o >*/
+main > section {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Campo de Busca*/
+#input-search {
+    height: 46px;
+    width: 100%;
+    padding: 0px 15px;
+    margin-top: 30px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;/*arrendondamento da borda*/
+    background-color: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+}
+/*Adicionando sombra a caixa de input ao passar o mouse por cima*/
+#input-search:hover, #input-search:focus-within {/*focus-within= deixando o elemento em foco ao clicar mesmo tirando o mouse de cima*/
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+#input-search input {
+     height: 100%;
+     margin: 0px 10px;
+     border: none;
+     color: var(--secondary-font-color);
+     background-color: transparent;/*Deixar a cor de fundo transparente caso mude o tema da pagina não influencia o input*/
+     flex: 1;
+}
+
+#search-icon {
+    height: 20px;
+    width: 20px;
+}
+
+#keybord-icon {
+    height: 11px;
+    width: 19px;
+}
+
+#mic-icon {
+    height: 24px;
+    width: 24px;
+    margin-left: 15px;
+}
+/*Alteração do estado dos icones teclado e microfone quando passar o mouse por cima deles*/
+#keybord-icon:hover, #mic-icon:hover {
+    cursor: pointer; /*adicionando a mãozinha no cursor ao passar o mouse*/
+}
+
+#buttons {
+    margin-top: 30px;
+}
+
+#buttons button {
+    padding: 10px 16px;
+    background-origin: 4px;
+    border: 1px solid var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-font-color);
+    font-size: 14px;
+}
+/*Aqui imformamos que o ultimo elemento da div button que no caso é um botão ganha margem à es  esquerda*/
+#buttons button:last-child{
+    margin-left: 5px;
+}
+
+#buttons button:hover {
+    color: var(--secondary-font-color);
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+footer {
+    height: 80px;
+    font-size: 14px;
+    background-color: var(--secondary-bg-color);
+}
+
+footer > div {
+    height: 40px;
+    padding: 0px 30px;
+    border-top: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+}
+
+
+footer, footer a {
+    color: var(--primary-font-color);
+}
+
+footer > div:last-child {
+    justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+}
+/*adicionando underline quando passar o mouse em cima dos elementos*/
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+}
+
+footer .left a{
+    margin-right: 27px;
+}
+
+footer .right a{
+    margin-left: 27px;
+}
